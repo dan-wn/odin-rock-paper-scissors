@@ -32,5 +32,7 @@ function getHumanChoice () {
 
 // console.log(getHumanChoice()); for debugging 
 
+let humanScore = 0;
+let computerScore = 0;
 
 
