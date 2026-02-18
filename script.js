@@ -30,8 +30,7 @@ function getHumanChoice () {
   return humanChoice;
 }
 
-let humanScore = 0;
-let computerScore = 0;
+
 
 // Write the logic to play a single round
 // Write a function that takes the human and computer choices as arguments
@@ -76,9 +75,28 @@ function playRound (humanChoice, computerChoice) {
   }
 }
 
-playRound(getHumanChoice(), getComputerChoice());
-console.log(computerScore);
-console.log(humanScore);
+let humanScore = 0;
+  let computerScore = 0;
+
+// Write the logic to play the entire game
+function playGame () {
+  for (i = 0; i < 5; i++) {
+      alert(`Round ${i + 1}`)
+      playRound(getHumanChoice(), getComputerChoice());
+      alert(`Player Score: ${humanScore} Computer Score: ${computerScore}`);
+  }
+  if (humanScore > computerScore) {
+    alert("Player Won!");
+  }
+  else if (computerScore > humanScore) {
+    alert("Player Lose!");
+  }
+  else {
+    alert("We have a tie!");
+  }
+}
+
+playGame();
 
 
 
